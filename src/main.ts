@@ -25,6 +25,4 @@ new Vue({
   render: h => h(App)
 }).$mount('#app');
 
-if(document.documentElement.clientWidth>500){
-  window.alert('为保证浏览效果请使用移动端打开')
-}
+
