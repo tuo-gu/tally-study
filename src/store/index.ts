@@ -46,25 +46,7 @@ const store=new Vuex.Store({
     changePopup(state){
       state.popup=false
     },
-    deleteDate(state,value){
-      store.commit('remove');
-      function isObjectChanged(source:RecordItem, comparison:RecordItem) {
-        const _source = JSON.stringify(source)
-        const _comparison = JSON.stringify({...source,...comparison})
-        return _source === _comparison
-      }
-      for (let i = 0; i < state.sortHoursRecordList.length; i++) {
-        if(isObjectChanged(value,state.sortHoursRecordList[i]))
-        {
-          state.sortHoursRecordList.splice(i, 1);
-          window.localStorage.setItem(localStorageNameKey, JSON.stringify(state.sortHoursRecordList));
-          store.commit('fetchRecord')
-          store.commit('updateDateList')
-          store.commit('sortDateLists')
-          break;
-        }
-      }
-    },
+
     clearEditDate(state){
       state.editDate={} as RecordItem;
       state.editDateClone={} as RecordItem;
