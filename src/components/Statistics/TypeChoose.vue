@@ -49,17 +49,14 @@
     justify-content: space-evenly;
     background-color: white;
     font-size: 20px;
-    box-shadow: inset 0 -1px 5px #ddd;
+    border: 1px solid #aaa;
     >li{
       display: flex;
       justify-content: center;
       flex-grow: 1;
       padding:4px ;
       color: #999999;
-      &.selected {
-        box-shadow: inset 0 -1px 4px deepskyblue;
-        color: black;
-      }
+
     }
   }
 </style>

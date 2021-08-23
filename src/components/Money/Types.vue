@@ -35,7 +35,7 @@
       flex-grow: 1;
       padding:4px ;
       &.selected{
-        box-shadow:  0 2px 1px $color-heightLight;
+        border:1px solid $color-heightLight
       }
     }
   }
